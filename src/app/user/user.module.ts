@@ -5,6 +5,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContainerComponent } from './container/container.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { StandartUserComponent } from './standart-user/standart-user.component';
+import { LoggedUserComponent } from './logged-user/logged-user.component';
 
 
 
@@ -13,7 +15,9 @@ import { AppRoutingModule } from '../app-routing.module';
     UserComponent,
     HeaderComponent,
     FooterComponent,
-    ContainerComponent
+    ContainerComponent,
+    StandartUserComponent,
+    LoggedUserComponent
   ],
   imports: [
     CommonModule,

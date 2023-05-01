@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="card m-2" style="width:200px;" *ngFor="let p of products">
+            <img class="card-img-top" src="assets/product.png" alt="Card image" height="100">
+            <div class="card-body">
+                <h4 class="card-title text-center">{{p.Name}}</h4>
+                <p class="card-text">{{p.Description}}</p>
+                <p class="card-text"><b>{{p.Price|currency}}</b></p>
+                <a href="#" class="btn btn-primary">Add to Chart</a>
+            </div>
+        </div>     
+    </div>
+</div>
+
