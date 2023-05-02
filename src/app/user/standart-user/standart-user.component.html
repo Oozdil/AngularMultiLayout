@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row mt-5">
       <div class="col-md-2"></div>
-      <div class="col">
+      <div class="col" *ngIf="!isLoggedIn">
         <h1 class="text-center">You are not logged in</h1>
         <p class="text-center">Change the user-type and log in to see the changes in the menu bar!</p>
         <div class="card  mt-3 m-1">
@@ -28,12 +28,21 @@
               </div>
             </div>
             <div class="d-grid mt-2">
-              <button class="btn btn-primary" type="button">Login</button>
+              <button class="btn btn-primary" type="button" (click)="Login();">Login</button>
             </div>
           </div>
         </div>
       </div>
+
+        <div class="col" *ngIf="isLoggedIn">
+          <h1 class="text-center">Welcome user to the Angular Tutorial webpage !</h1>
+          <img src="./assets/angular-anasayfasi.jpg">
+        </div>
+        
+
+
       <div class="col-md-2"></div>
     </div>
   
   </div>
+

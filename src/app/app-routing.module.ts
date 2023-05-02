@@ -7,6 +7,7 @@ import { LoggedUserComponent } from './user/logged-user/logged-user.component';
 import { SalesComponent } from './admin/sales/sales.component';
 import { UsersComponent } from './admin/users/users.component';
 import { ProductsComponent } from './admin/products/products.component';
+import { GuardServiceGuard } from './guard-service.guard';
 
 const routes: Routes = [
 
@@ -18,7 +19,7 @@ const routes: Routes = [
         path: '', component: StandartUserComponent
       },
       {
-        path: 'user', component: LoggedUserComponent
+        path: 'user', component: LoggedUserComponent,canActivate:[GuardServiceGuard]
       }
     ]
   },
